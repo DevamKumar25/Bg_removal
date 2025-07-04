@@ -1,4 +1,4 @@
-// API controller function for mnage clerk user with database
+// API controller function for manage clerk user with database
 
 // https://localhost:4000/api/user/webhooks
 

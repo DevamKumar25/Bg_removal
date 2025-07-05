@@ -1,6 +1,5 @@
 import pkg from "svix";
 const { Webhook } = pkg; 
-
 import userModels from "../models/userModels.js";
 
 const clerkWebhooks = async (req, res) => {
@@ -45,7 +44,7 @@ const clerkWebhooks = async (req, res) => {
       }
 
       case "user.deleted": {
-        await userModels.findOneAndDelete({ clerkId: data.id }); // ✅ Corrected: use delete, not update
+        await userModels.findOneAndDelete({ clerkId: data.id }); 
         res.json({});
         break;
       }

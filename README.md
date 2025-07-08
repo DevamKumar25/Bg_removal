@@ -64,7 +64,7 @@ Open http://localhost:5173 → sign up (Clerk), upload an image, remove backgrou
 ---
 
 ## 📂 Folder Structure
-
+```bash
 root
 │  server.js              # Express server entry point
 │  .env                   # Environment variables (keep this secret!)
@@ -92,7 +92,7 @@ root
         └─pages           # Main pages (Home, BuyCredit, Result)
 
 
-
+```
 ---
 
 

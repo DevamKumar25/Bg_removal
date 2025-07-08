@@ -48,14 +48,14 @@ RAZORPAY_KEY_ID=rzp_test_...
 RAZORPAY_KEY_SECRET=your_secret
 CURRENCY=INR
 
-# Clerk
+Clerk
 CLERK_PUBLISHABLE_KEY=...
 CLERK_SECRET_KEY=...
 
 # 3. Run both servers
-# backend (port 4000)
+ backend (port 4000)
 npm run dev        # nodemon server.js
-# frontend (port 5173)
+ frontend (port 5173)
 cd client && npm run dev
 
 

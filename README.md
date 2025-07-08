@@ -29,13 +29,15 @@ Remove backgrounds from images with a single click, manage user credits, and acc
 
 ## 🚀 Quick Start (Local)
 
-```bash
+
 # 1. Clone & install
 git clone https://github.com/your‑username/bg‑removal.git
 cd bg‑removal
 npm install        # root – installs backend packages
 cd client
 npm install        # frontend
+
+---
 
 # 2. Environment variables (root/.env)
 # ------------------------------------
@@ -45,47 +47,56 @@ CLIPDROP_API=your_clipdrop_key
 RAZORPAY_KEY_ID=rzp_test_...
 RAZORPAY_KEY_SECRET=your_secret
 CURRENCY=INR
-# Clerk
+
+Clerk
 CLERK_PUBLISHABLE_KEY=...
 CLERK_SECRET_KEY=...
 
 # 3. Run both servers
-# backend (port 4000)
+ backend (port 4000)
 npm run dev        # nodemon server.js
-# frontend (port 5173)
+ frontend (port 5173)
 cd client && npm run dev
 
 
 Open http://localhost:5173 → sign up (Clerk), upload an image, remove background.
 
+---
+
+## 📂 Folder Structure
 
 root
-│  server.js
-│  .env        # never commit!
+│  server.js              # Express server entry point
+│  .env                   # Environment variables (keep this secret!)
 │
 ├─configs
-│   └─mongodb.js
-├─models
-│   ├─userModels.js
-│   └─transactionModel.js
-├─routes
-│   ├─userRoutes.js
-│   └─imageRoutes.js
-├─controllers
-│   ├─UserController.js
-│   └─ImageController.js
+│   └─mongodb.js          # MongoDB connection setup
 │
-└─client  # React app (Vite)
-    ├─src
-    │  ├─assets
-    │  ├─context
-    │  ├─components
-    │  └─pages
-    └─index.html
+├─models
+│   ├─userModels.js       # Mongoose schema for user data (credits, Clerk ID)
+│   └─transactionModel.js # Schema for credit purchase transactions
+│
+├─routes
+│   ├─userRoutes.js       # Routes for user actions (credit, payment, webhook)
+│   └─imageRoutes.js      # Route to handle background removal
+│
+├─controllers
+│   ├─UserController.js   # Handles user logic (payment, webhooks, credit)
+│   └─ImageController.js  # Handles background removal logic
+│
+└─client                  # Frontend (Vite + React)
+    └─src
+        ├─assets          # Static images, icons, and plan data
+        ├─context         # Global AppContext provider for state and functions
+        ├─components      # Shared UI components (Navbar, Footer, etc.)
+        └─pages           # Main pages (Home, BuyCredit, Result)
 
 
 
-🛠️ Important Scripts
+---
+
+
+## 🛠️ Important Scripts
 | Location | Script          | Purpose                              |
 | -------- | --------------- | ------------------------------------ |
 | root     | `npm run dev`   | `nodemon server.js` (backend reload) |
@@ -93,7 +104,9 @@ root
 | root     | `npm run start` | production `node server.js`          |
 
 
-🔒 Environment Variables
+---
+
+## 🔒 Environment Variables
 
 | Key                                        | Description                      |
 | ------------------------------------------ | -------------------------------- |
@@ -107,16 +120,20 @@ root
 
 Never hard‑code secrets—use .env and import 'dotenv/config' at the top of server.js.
 
-🧪 Testing Razorpay (Sandbox)
+
+---
+
+## 🧪 Testing Razorpay (Sandbox)
+
 1. Switch dashboard to Test Mode
 
 2. Use any test card (e.g., 4111 1111 1111 1111, CVV 123, future expiry)
 
 3. Complete payment → redirect → credits increment
 
+---
 
-
-🖥️ Deployment
+## 🖥️ Deployment
 
 | Layer        | Service                             | Command / Setting                       |
 | ------------ | ----------------------------------- | --------------------------------------- |
@@ -126,9 +143,9 @@ Never hard‑code secrets—use .env and import 'dotenv/config' at the top of se
 | **Webhook**  | Razorpay ↔ `/api/user/verify-razor` | Public HTTPS URL                        |
 
 
+---
 
-
-🙏 Credits
+## 🙏 Credits
 
 ClipDrop – Background Removal API
 
@@ -138,11 +155,12 @@ Razorpay – Indian payment gateway
 
 Heroicons / Lucide – Icons
 
+---
 
-📜 License
+## 📜 License
 MIT — free for personal and commercial use. See LICENSE file.
 
+---
 
-
-Enjoy hacking!
+# Enjoy hacking!
 Feel free to submit PRs or open issues. If you build something cool on top, let me know 🙂

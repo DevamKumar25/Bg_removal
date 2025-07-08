@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { assets } from "../assets/assets";
 import { AppContext } from "../context/AppContext.jsx";
+import { Link } from "react-router-dom";
 
 const Result = () => {
   const { resultImage, image } = useContext(AppContext);

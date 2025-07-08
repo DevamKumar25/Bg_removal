@@ -29,13 +29,15 @@ Remove backgrounds from images with a single click, manage user credits, and acc
 
 ## 🚀 Quick Start (Local)
 
-```bash
+
 # 1. Clone & install
 git clone https://github.com/your‑username/bg‑removal.git
 cd bg‑removal
 npm install        # root – installs backend packages
 cd client
 npm install        # frontend
+
+---
 
 # 2. Environment variables (root/.env)
 # ------------------------------------
@@ -58,6 +60,7 @@ cd client && npm run dev
 
 Open http://localhost:5173 → sign up (Clerk), upload an image, remove background.
 
+---
 
 root
 │  server.js
@@ -84,6 +87,8 @@ root
     └─index.html
 
 
+---
+
 
 🛠️ Important Scripts
 | Location | Script          | Purpose                              |
@@ -92,6 +97,8 @@ root
 | client   | `npm run dev`   | `vite` (frontend hot‑reload)         |
 | root     | `npm run start` | production `node server.js`          |
 
+
+---
 
 🔒 Environment Variables
 
@@ -107,14 +114,18 @@ root
 
 Never hard‑code secrets—use .env and import 'dotenv/config' at the top of server.js.
 
+
+---
+
 🧪 Testing Razorpay (Sandbox)
+
 1. Switch dashboard to Test Mode
 
 2. Use any test card (e.g., 4111 1111 1111 1111, CVV 123, future expiry)
 
 3. Complete payment → redirect → credits increment
 
-
+---
 
 🖥️ Deployment
 
@@ -126,7 +137,7 @@ Never hard‑code secrets—use .env and import 'dotenv/config' at the top of se
 | **Webhook**  | Razorpay ↔ `/api/user/verify-razor` | Public HTTPS URL                        |
 
 
-
+---
 
 🙏 Credits
 
@@ -138,11 +149,12 @@ Razorpay – Indian payment gateway
 
 Heroicons / Lucide – Icons
 
+---
 
 📜 License
 MIT — free for personal and commercial use. See LICENSE file.
 
-
+---
 
 Enjoy hacking!
 Feel free to submit PRs or open issues. If you build something cool on top, let me know 🙂

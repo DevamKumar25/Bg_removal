@@ -63,30 +63,33 @@ Open http://localhost:5173 → sign up (Clerk), upload an image, remove backgrou
 
 ---
 
-## 📂 Folder Structure
+## 📂 Folder Structure
 
 root
-│  server.js        # entry
-│  .env             # never commit!
+│  server.js              # Express server entry point
+│  .env                   # Environment variables (keep this secret!)
 │
 ├─configs
-│   └─mongodb.js
-├─models
-│   ├─userModels.js
-│   └─transactionModel.js
-├─routes
-│   ├─userRoutes.js
-│   └─imageRoutes.js
-├─controllers
-│   ├─UserController.js
-│   └─ImageController.js
+│   └─mongodb.js          # MongoDB connection setup
 │
-└─client            # React (Vite)
+├─models
+│   ├─userModels.js       # Mongoose schema for user data (credits, Clerk ID)
+│   └─transactionModel.js # Schema for credit purchase transactions
+│
+├─routes
+│   ├─userRoutes.js       # Routes for user actions (credit, payment, webhook)
+│   └─imageRoutes.js      # Route to handle background removal
+│
+├─controllers
+│   ├─UserController.js   # Handles user logic (payment, webhooks, credit)
+│   └─ImageController.js  # Handles background removal logic
+│
+└─client                  # Frontend (Vite + React)
     └─src
-        ├─assets
-        ├─context
-        ├─components
-        └─pages
+        ├─assets          # Static images, icons, and plan data
+        ├─context         # Global AppContext provider for state and functions
+        ├─components      # Shared UI components (Navbar, Footer, etc.)
+        └─pages           # Main pages (Home, BuyCredit, Result)
 
 
 

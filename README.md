@@ -47,6 +47,7 @@ CLIPDROP_API=your_clipdrop_key
 RAZORPAY_KEY_ID=rzp_test_...
 RAZORPAY_KEY_SECRET=your_secret
 CURRENCY=INR
+
 # Clerk
 CLERK_PUBLISHABLE_KEY=...
 CLERK_SECRET_KEY=...
@@ -60,10 +61,13 @@ cd client && npm run dev
 
 Open http://localhost:5173 → sign up (Clerk), upload an image, remove background.
 
+---
+
+## 📂 Folder Structure
 
 root
-│  server.js
-│  .env        # never commit!
+│  server.js        # entry
+│  .env             # never commit!
 │
 ├─configs
 │   └─mongodb.js
@@ -77,13 +81,13 @@ root
 │   ├─UserController.js
 │   └─ImageController.js
 │
-└─client  # React app (Vite)
-    ├─src
-    │  ├─assets
-    │  ├─context
-    │  ├─components
-    │  └─pages
-    └─index.html
+└─client            # React (Vite)
+    └─src
+        ├─assets
+        ├─context
+        ├─components
+        └─pages
+
 
 
 ---

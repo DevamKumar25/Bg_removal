@@ -60,7 +60,6 @@ cd client && npm run dev
 
 Open http://localhost:5173 → sign up (Clerk), upload an image, remove background.
 
----
 
 root
 │  server.js
@@ -90,7 +89,7 @@ root
 ---
 
 
-🛠️ Important Scripts
+## 🛠️ Important Scripts
 | Location | Script          | Purpose                              |
 | -------- | --------------- | ------------------------------------ |
 | root     | `npm run dev`   | `nodemon server.js` (backend reload) |
@@ -100,7 +99,7 @@ root
 
 ---
 
-🔒 Environment Variables
+## 🔒 Environment Variables
 
 | Key                                        | Description                      |
 | ------------------------------------------ | -------------------------------- |
@@ -117,7 +116,7 @@ Never hard‑code secrets—use .env and import 'dotenv/config' at the top of se
 
 ---
 
-🧪 Testing Razorpay (Sandbox)
+## 🧪 Testing Razorpay (Sandbox)
 
 1. Switch dashboard to Test Mode
 
@@ -127,7 +126,7 @@ Never hard‑code secrets—use .env and import 'dotenv/config' at the top of se
 
 ---
 
-🖥️ Deployment
+## 🖥️ Deployment
 
 | Layer        | Service                             | Command / Setting                       |
 | ------------ | ----------------------------------- | --------------------------------------- |
@@ -139,7 +138,7 @@ Never hard‑code secrets—use .env and import 'dotenv/config' at the top of se
 
 ---
 
-🙏 Credits
+## 🙏 Credits
 
 ClipDrop – Background Removal API
 
@@ -151,10 +150,10 @@ Heroicons / Lucide – Icons
 
 ---
 
-📜 License
+## 📜 License
 MIT — free for personal and commercial use. See LICENSE file.
 
 ---
 
-Enjoy hacking!
+# Enjoy hacking!
 Feel free to submit PRs or open issues. If you build something cool on top, let me know 🙂
